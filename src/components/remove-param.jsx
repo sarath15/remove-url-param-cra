@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { withRouter, Link } from "react-router-dom";
 import logo from "../logo.svg";
 import "../App.css";
@@ -8,6 +8,10 @@ function RemoveParam(props) {
   const removeQuery = () => {
     props.history.replace("/remove-param");
   };
+
+  useEffect(() => {
+    console.log("Render on mount");
+  }, []);
 
   return (
     <div className="App">
